@@ -12,7 +12,10 @@ function App() {
       
       {/* <h1>Hello World !</h1> */}
 
-      <PhotoList />
+     
+      <div className = "wrapper">
+ <PhotoList />
+      </div>
 
     </div>
   );

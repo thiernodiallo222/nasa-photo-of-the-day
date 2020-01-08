@@ -32,6 +32,8 @@ code {
   box-shadow: inset;
   align-self: flex-start;
   color: black;
+  text-align: left;
+  padding: 10px;
 }
 .photoCard{
   width: 550px;
@@ -39,9 +41,5 @@ code {
   flex-direction: column;
   background-color: rgb(211, 212, 213);
   position: absolute;
-  
-
-  
-
 }
 
