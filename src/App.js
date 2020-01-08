@@ -5,11 +5,15 @@ import PhotoList from "./Components/PhotoList";
 function App() {
   return (
     <div className="App">
-      <p>
+      {/* <p>
         Read through the instructions in the README.md file to build your NASA
         app! Have fun 🚀!
-        <PhotoList />
-      </p>
+      </p> */}
+      
+      <h1>Hello World !</h1>
+
+      <PhotoList />
+
     </div>
   );
 }
@@ -17,4 +21,4 @@ function App() {
 export default App;
 
 
-// This is for the first commit.
+
