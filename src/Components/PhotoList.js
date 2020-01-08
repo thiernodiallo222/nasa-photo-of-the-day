@@ -4,30 +4,33 @@ import PhotoCard from './PhotoCard';
 
 export default function PhotoList() {
 
+     const [photos, setPhotos] = useState([]);
 
-    // const [photo] = useState([]);
-     const [photo, setPhoto] = useState([]);
-
-    // defining setPhoto function
-
-    // function setPhoto(arg) {
-    //     photo = arg;
-    // }
+]
 
     // using useEffect
 
     useEffect(() => {
-        // using axios to fetch data 
+        // using aphotosios to fetch data 
         axios
-            .get(`https://api.nasa.gov/planetary/apod`)
+            // .get(`https://api.nasa.gov/planetary/apod?api_key=zzE2GH1fbwJ09BkEKYwhstc5kSdKphotosKDcPKErHOKk`)
+            // .get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`)
+           .get(`https://api.github.com/users/thiernodiallo222/followers`)
 
             // using API url to fetch data
             
             .then(response => {
 
-                // console.log(response); // displaying data to check its structure
+                console.log(response); // displaying data to check its structure
 
-                setPhoto(response);
+                // setPhotos(response.data => {
+                //     useState(response.data);
+                // });
+                console.log(`Photos before: ${photos}`)
+
+                setPhotos(response.data);
+
+                console.log(`Photos after: ${photos}`)
 
                 // set the state of the photo
     
@@ -38,21 +41,21 @@ export default function PhotoList() {
         
             
     }, []);
-     console.log("Photo2", photo);
+     console.log("My photo object:", photos);
 
     return (
-        <div>
-            {
-                photo.map(x => {
-                return (
-                <PhotoCard
-                DATE = {x.date}
-                HD = {x.hd}
-                API KEY = {x.api_key}
-                />)
-                })
-            }     
-        </div>
-    )
+        // <div className="photos">
+            
+                
+                        <PhotoCard
+                            Title={photos.title}
+                            Image={photos.hdurl}
+                            Date={photos.date}
+                            Copyright={photos.Copyright}
+                            Ephotosplanation={photos.Explanation}
+                            Url={photos.url}
+                        />
+        // </div>
+    );
 }
 
