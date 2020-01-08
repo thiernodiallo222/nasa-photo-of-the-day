@@ -6,7 +6,6 @@ export default function PhotoList() {
 
      const [photos, setPhotos] = useState([]);
 
-]
 
     // using useEffect
 
@@ -14,48 +13,44 @@ export default function PhotoList() {
         // using aphotosios to fetch data 
         axios
             // .get(`https://api.nasa.gov/planetary/apod?api_key=zzE2GH1fbwJ09BkEKYwhstc5kSdKphotosKDcPKErHOKk`)
-            // .get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`)
-           .get(`https://api.github.com/users/thiernodiallo222/followers`)
+            .get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`)
+        //    .get(`https://api.github.com/users/thiernodiallo222/followers`)
 
             // using API url to fetch data
             
-            .then(response => {
+            .then(res => {
 
-                console.log(response); // displaying data to check its structure
+                console.log(res); // displaying data to check its structure
 
-                // setPhotos(response.data => {
-                //     useState(response.data);
-                // });
-                console.log(`Photos before: ${photos}`)
-
-                setPhotos(response.data);
-
-                console.log(`Photos after: ${photos}`)
+                setPhotos(res.data);
 
                 // set the state of the photo
     
             })
             .catch(err => {
                 console.log(`Sorry, data was not returned !`, err);
-            });
-        
-            
+            });      
     }, []);
      console.log("My photo object:", photos);
 
     return (
-        // <div className="photos">
+        <div className="photos">
             
-                
-                        <PhotoCard
-                            Title={photos.title}
-                            Image={photos.hdurl}
-                            Date={photos.date}
-                            Copyright={photos.Copyright}
-                            Ephotosplanation={photos.Explanation}
-                            Url={photos.url}
-                        />
-        // </div>
+            {
+            <PhotoCard
+                            title={photos.title}
+                            hdurl={photos.hdurl}
+                            date={photos.date}
+                            copyright={photos.copyright}
+                            explanation={photos.explanation}
+                            url={photos.url}
+                           service_version={photos.service_version}
+                           media_type = {photos.media_type}
+                    
+                        />    
+          }      
+                        
+         </div>
     );
 }
 

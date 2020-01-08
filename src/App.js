@@ -10,7 +10,7 @@ function App() {
         app! Have fun 🚀!
       </p> */}
       
-      <h1>Hello World !</h1>
+      {/* <h1>Hello World !</h1> */}
 
       <PhotoList />
 

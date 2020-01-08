@@ -11,3 +11,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.image{
+  height: 300px;
+  width:500px ;
+  margin: 1px;
+  margin-left: 25px;
+  margin-right: 25px;
+  box-sizing: border-box;
+  box-shadow: inset;
+  border-radius: 1px;
+}
+.cardItem{
+  width: 500px;
+  height: fit-content;
+  background-color: rgb(255, 255, 255);
+  margin: 2.2px;
+  margin-left: 25px;
+  margin-right: 25px;
+  box-sizing: border-box;
+  box-shadow: inset;
+  align-self: flex-start;
+  color: black;
+}
+.photoCard{
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(211, 212, 213);
+  position: absolute;
+  
+
+  
+
+}
+
