@@ -3,7 +3,7 @@ import React from 'react'
 export default function PhotoCard(props) {
     return (
         <div className ='photoCard'>
-            <h1 className='cardItem'>{props.title}</h1>
+            <h1 className='cardItem title'>{props.title}</h1>
             <img  className = "image"alt ="not available"src = {props.hdurl}/>
             {/* // <img className='cardItem' {src = "props.hdurl"}/> */}
             <p className = 'cardItem'>Date: {props.date}</p>

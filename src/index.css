@@ -43,3 +43,8 @@ code {
   position: absolute;
 }
 
+.title{
+  display: flex;
+  justify-content: center;
+  color: red;
+}
