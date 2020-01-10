@@ -26,7 +26,7 @@ background-color: rgb(211, 212, 213);
 `;
 
 const Image = styled.img`
-  height: 400px;
+  height: 350px;
   width:90%;
   margin: 1px;
   margin-left: 5%;
