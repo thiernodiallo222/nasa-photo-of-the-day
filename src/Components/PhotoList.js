@@ -44,9 +44,7 @@ export default function PhotoList() {
                             copyright={photos.copyright}
                             explanation={photos.explanation}
                             url={photos.url}
-                           service_version={photos.service_version}
-                           media_type = {photos.media_type}
-                    
+                           
                         />    
           }      
                         

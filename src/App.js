@@ -1,23 +1,23 @@
 import React from "react";
 import "./App.css";
 import PhotoList from "./Components/PhotoList";
+import styled from "styled-components";
+
+
+const Body = styled.div`
+display: flex;
+background-color: black;
+width: 100%;
+
+`;
 
 function App() {
   return (
-    <div className="App">
-      {/* <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p> */}
-      
-      {/* <h1>Hello World !</h1> */}
-
-     
-      <div className = "wrapper">
+    <Body>
+       
  <PhotoList />
-      </div>
-
-    </div>
+    
+    </Body>
   );
 }
 
